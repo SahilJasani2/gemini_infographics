@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Optimizing the Future of Industrial Biotechnology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!--
+    NEITHER Mermaid JS NOR SVG were used anywhere in this output. All visualizations are rendered using Chart.js (Canvas) or structured HTML/CSS with Tailwind.
+
+    Color Palette Chosen: "Energetic & Playful"
+    - #FFFFFF (White)
+    - #0D1B2A (Dark Blue Text)
+    - #3D5A80 (Steel Blue Accent)
+    - #98C1D9 (Light Blue Chart)
+    - #E0FBFC (Pale Cyan Chart)
+    - #EE6C4D (Burnt Coral Chart)
+    - #293241 (Gunmetal Chart)
+
+    Infographic Narrative Plan:
+    1.  The High Stakes: Hook with market growth and dual economic/environmental drivers.
+    2.  The Core Challenge: Explain the complexity of microbial bioprocesses.
+    3.  The Old Guard Fails: Show why PID control is inadequate.
+    4.  The Game Changer: Highlight the advantages of Model Predictive Control (MPC).
+    5.  Implementation Hurdles: Address the practical challenges of deploying advanced control.
+    6.  The Future is Automated: Conclude with a look at AI, IoT, and future research.
+
+    Visualization Selection Plan:
+    - Market Growth: Line Chart (Chart.js) - Goal: Change. Shows time-series trend.
+    - Economic/Environmental Impact: Donut Charts & Big Numbers (Chart.js & HTML) - Goal: Inform. Highlights key stats.
+    - Bioprocess Complexity: HTML/CSS Flow Diagram - Goal: Organize. Shows relationships without SVG.
+    - PID vs. Bioprocess Needs: HTML/CSS Comparison Table - Goal: Compare. Direct visual contrast.
+    - MPC Workflow: HTML/CSS Flow Diagram - Goal: Organize. Illustrates the process steps.
+    - MPC Advantages: Radar Chart (Chart.js) - Goal: Compare. Shows multi-faceted strengths.
+    - Implementation Hurdles: Horizontal Bar Chart (Chart.js) - Goal: Compare. Ranks challenges.
+    - Future Trends: HTML/CSS Icon Grid - Goal: Organize. Visually groups future technologies.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3D5A80, #EE6C4D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .kpi-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+            border-left: 5px solid #3D5A80;
+        }
+        .flow-step {
+            background-color: #FFFFFF;
+            border: 2px solid #98C1D9;
+            color: #0D1B2A;
+        }
+        .flow-arrow {
+            color: #3D5A80;
+        }
+    </style>
+</head>
+<body class="text-[#0D1B2A]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-8 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 gradient-text">The Control Revolution</h1>
+            <p class="text-xl md:text-2xl font-light text-[#0D1B2A] max-w-4xl mx-auto">Optimizing Bioreactor Operations for a Smarter, Sustainable Future</p>
+        </header>
+
+        <main class="space-y-12 md:space-y-20">
+
+            <section id="high-stakes" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">The High Stakes of Bioprocessing</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Industrial biotechnology is not just growing; it's exploding. This growth is driven by a powerful dual mandate: achieve massive economic gains while delivering critical environmental benefits. Optimizing bioreactors is the key to unlocking this potential.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-4">Projected Global Bioreactor Market Growth</h3>
+                        <div class="chart-container">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-4">The chart illustrates the exponential market demand for advanced bioreactor systems, underscoring the economic imperative for optimization technologies that boost efficiency and output.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="kpi-card">
+                            <h4 class="text-lg font-semibold text-[#3D5A80]">Economic Win</h4>
+                            <p class="text-4xl font-extrabold text-[#EE6C4D]">25.8%</p>
+                            <p class="text-gray-600">Increase in net profit from a single wastewater retrofitting project, showcasing direct financial returns from optimization.</p>
+                        </div>
+                        <div class="kpi-card border-left-color-[#EE6C4D]">
+                             <h4 class="text-lg font-semibold text-[#3D5A80]">Environmental Impact</h4>
+                            <p class="text-4xl font-extrabold text-[#98C1D9]">89.8%</p>
+                            <p class="text-gray-600">Reduction in freshwater consumption achieved by implementing Membrane Bioreactors (MBRs) in the food industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenge" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">The Unseen Challenge: Taming Microbial Dynamics</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Controlling a bioreactor is more than just turning dials. It's managing a complex, living ecosystem where billions of microscopic cells behave in dynamic, non-linear, and often unpredictable ways. This inherent biological complexity is the central challenge.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-6">The Cost of Unchecked Cellular Heterogeneity</h3>
+                        <div class="chart-container h-80 max-h-80">
+                            <canvas id="heterogeneityChart"></canvas>
+                        </div>
+                        <p class="text-sm text-center text-gray-500 mt-4">Fluctuations and variations among individual cells can lead to staggering losses, with some industrial fermentations losing 30% or more of potential yield, or even failing completely.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-xl font-bold text-center mb-6">Key Drivers of Bioprocess Complexity</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <span class="text-2xl mr-4">🧬</span>
+                                <div>
+                                    <h4 class="font-bold">Metabolic Burden</h4>
+                                    <p class="text-sm text-gray-600">Forcing cells to overproduce a product drains essential resources like ATP and cofactors.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <span class="text-2xl mr-4">⚖️</span>
+                                 <div>
+                                    <h4 class="font-bold">Resource Competition</h4>
+                                    <p class="text-sm text-gray-600">Intense competition for shared cellular machinery like ribosomes and RNA polymerases.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <span class="text-2xl mr-4">🧪</span>
+                                <div>
+                                    <h4 class="font-bold">Toxic Accumulation</h4>
+                                    <p class="text-sm text-gray-600">Metabolites can build up to levels that are toxic to the cells producing them.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+                                <span class="text-2xl mr-4">🔬</span>
+                                 <div>
+                                    <h4 class="font-bold">Population Heterogeneity</h4>
+                                    <p class="text-sm text-gray-600">Not all cells are equal; variations lead to inconsistent productivity and behavior.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pid-fails" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">The Old Guard Fails: Why PID Control Can't Keep Up</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">For decades, Proportional-Integral-Derivative (PID) controllers have been the industry standard. However, their rigid, linear assumptions are fundamentally mismatched with the dynamic reality of bioprocesses, leading to inefficiency, instability, and lost value.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#3D5A80]">Bioprocess Demands</h3>
+                            <ul class="space-y-3 list-disc list-inside text-gray-700">
+                                <li>Handle highly <span class="font-semibold">non-linear</span> growth kinetics.</li>
+                                <li>Adapt to <span class="font-semibold">time-varying</span> cell metabolism.</li>
+                                <li>Manage <span class="font-semibold">multiple interacting variables</span> (pH, O₂, temp).</li>
+                                <li>Compensate for significant measurement <span class="font-semibold">time delays</span>.</li>
+                                <li>Operate without a stable <span class="font-semibold">equilibrium point</span> (e.g., fed-batch).</li>
+                                <li>Maintain operation within <span class="font-semibold">strict safety constraints</span>.</li>
+                            </ul>
+                        </div>
+                        <div>
+                             <h3 class="text-xl font-bold mb-4 text-[#EE6C4D]">PID Controller Limitations</h3>
+                             <ul class="space-y-3 text-gray-700">
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Assumes linear system behavior.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Uses fixed parameters that require manual retuning.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Designed for single-input, single-output systems.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Reacts poorly to delays, causing oscillations.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Requires a stable operating point for linearization.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Lacks inherent ability to enforce constraints.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mpc" class="space-y-8">
+                 <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">The Game Changer: Rise of Model Predictive Control</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Model Predictive Control (MPC) represents a paradigm shift. Instead of just reacting, it predicts the future, allowing it to proactively steer the bioprocess towards optimal performance while respecting all critical limits.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-4">The MPC Advantage</h3>
+                        <p class="text-center text-gray-500 mb-4">This radar chart shows how MPC excels across multiple critical control domains where traditional methods fall short, making it uniquely suited for complex bioprocesses.</p>
+                        <div class="chart-container">
+                            <canvas id="mpcAdvantagesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-6">How MPC Works: The Receding Horizon Loop</h3>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <div class="flow-step w-full text-center p-4 rounded-lg shadow">
+                                <p class="font-bold text-lg">1. DYNAMIC MODEL</p>
+                                <p class="text-sm">Uses a process model (first-principles or ML-based) to understand system dynamics.</p>
+                            </div>
+                            <div class="flow-arrow text-4xl font-light">↓</div>
+                            <div class="flow-step w-full text-center p-4 rounded-lg shadow">
+                                <p class="font-bold text-lg">2. PREDICT & OPTIMIZE</p>
+                                <p class="text-sm">Predicts future behavior and calculates the optimal sequence of control moves over a set horizon.</p>
+                            </div>
+                            <div class="flow-arrow text-4xl font-light">↓</div>
+                            <div class="flow-step w-full text-center p-4 rounded-lg shadow bg-[#3D5A80] text-white border-[#3D5A80]">
+                                <p class="font-bold text-lg">3. IMPLEMENT FIRST STEP</p>
+                                <p class="text-sm">Applies only the first calculated control action to the bioreactor.</p>
+                            </div>
+                            <div class="flex items-center w-full">
+                                <div class="flow-arrow text-4xl font-light -rotate-90">→</div>
+                                <div class="w-full border-t-2 border-dashed border-[#EE6C4D] my-2"></div>
+                                <div class="text-center px-2 text-sm font-semibold text-[#EE6C4D]">REPEAT</div>
+                            </div>
+                            <p class="text-sm text-gray-500 text-center">At the next time step, the entire process repeats with new measurements, continuously re-optimizing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="hurdles" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">Bridging the Gap: Overcoming Implementation Hurdles</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">While powerful, implementing MPC is not a simple plug-and-play solution. Success requires overcoming significant technical and operational challenges, from building accurate models to managing the complexities of industrial scale-up.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Ranking the Key Implementation Challenges</h3>
+                     <p class="text-center text-gray-500 mb-4">The effectiveness of any advanced control strategy is limited by these core hurdles. Data quality and model accuracy form the foundation upon which all other aspects depend.</p>
+                    <div class="chart-container">
+                        <canvas id="implementationHurdlesChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="future" class="space-y-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">The Future is Automated: The Next Wave of Bioreactor Intelligence</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">The journey doesn't end with MPC. The next frontier integrates AI, IoT, and Digital Twins to create truly smart, self-adaptive biomanufacturing systems. Closing key research gaps is essential to making this vision a reality.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-6">Emerging Technologies</h3>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-4xl mb-2">🧠</div>
+                                <h4 class="font-bold">AI & Machine Learning</h4>
+                                <p class="text-xs text-gray-600">For building more accurate predictive models and enabling self-optimizing control.</p>
+                            </div>
+                             <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-4xl mb-2">🌐</div>
+                                <h4 class="font-bold">Internet of Things (IoT)</h4>
+                                <p class="text-xs text-gray-600">Connecting advanced sensors for comprehensive, real-time data acquisition.</p>
+                            </div>
+                             <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-4xl mb-2">🧬</div>
+                                <h4 class="font-bold">Digital Twins</h4>
+                                <p class="text-xs text-gray-600">Creating virtual replicas of bioreactors for simulation, testing, and optimization.</p>
+                            </div>
+                            <div class="p-4 bg-gray-50 rounded-lg">
+                                <div class="text-4xl mb-2">📡</div>
+                                <h4 class="font-bold">Advanced Sensing</h4>
+                                <p class="text-xs text-gray-600">Developing novel online sensors for critical parameters that currently have measurement delays.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-6">Critical Research Gaps to Address</h3>
+                        <ul class="space-y-3">
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Plantwide Optimization:</span> Developing a unified methodology to optimize both upstream and downstream processes together.</div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Human-in-the-Loop:</span> Better understanding and modeling the role of human operators in semi-automated plants.</div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Economic Quantification:</span> Creating methods to calculate the precise monetary value of advanced control for transient (non-steady-state) processes.</div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Efficient Scale-Up:</span> Bridging the persistent gap between successful lab-scale processes and reliable industrial-scale production.</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 py-8 border-t border-gray-200">
+            <p class="text-gray-500">Infographic based on a literature review of bioreactor optimization and advanced process control. Created by Canvas Infographics.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxWidth) => {
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length > maxWidth) {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                } else {
+                    currentLine += ' ' + words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const commonChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: 'Inter',
+                            size: 12
+                        },
+                        color: '#293241'
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    titleFont: { family: 'Inter', size: 14, weight: 'bold' },
+                    bodyFont: { family: 'Inter', size: 12 },
+                    backgroundColor: '#0D1B2A',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#E0FBFC',
+                    callbacks: {
+                       title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { 
+                        color: '#293241', 
+                        font: { family: 'Inter' } 
+                    },
+                    grid: { color: '#e0e0e0' }
+                },
+                x: {
+                    ticks: { 
+                        color: '#293241', 
+                        font: { family: 'Inter' } 
+                    },
+                    grid: { display: false }
+                }
+            }
+        };
+
+        const marketGrowthCtx = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(marketGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['2022', '2024', '2026', '2028', '2030', '2032'],
+                datasets: [{
+                    label: 'Market Value ($ Billions)',
+                    data: [9.3, 12.5, 16.8, 21.5, 26.0, 30.42],
+                    borderColor: '#EE6C4D',
+                    backgroundColor: 'rgba(238, 108, 77, 0.2)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#EE6C4D',
+                    pointBorderColor: '#FFFFFF',
+                    pointHoverRadius: 7,
+                    pointHoverBackgroundColor: '#FFFFFF',
+                    pointHoverBorderColor: '#EE6C4D'
+                }]
+            },
+            options: { ...commonChartOptions }
+        });
+
+        const heterogeneityCtx = document.getElementById('heterogeneityChart').getContext('2d');
+        new Chart(heterogeneityCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Optimal Yield', 'Potential Loss due to Heterogeneity'],
+                datasets: [{
+                    data: [70, 30],
+                    backgroundColor: ['#3D5A80', '#EE6C4D'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                 plugins: {
+                    legend: {
+                        position: 'bottom',
+                         labels: {
+                            font: { family: 'Inter', size: 12 },
+                            color: '#293241'
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        titleFont: { family: 'Inter', size: 14, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 },
+                        backgroundColor: '#0D1B2A',
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.parsed}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const mpcAdvantagesCtx = document.getElementById('mpcAdvantagesChart').getContext('2d');
+        new Chart(mpcAdvantagesCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Constraint Handling', ['Multivariable', 'Control'], 'Predictive Power', 'Time Delay', 'Robustness'],
+                datasets: [{
+                    label: 'MPC Capability',
+                    data: [95, 90, 85, 88, 75],
+                    fill: true,
+                    backgroundColor: 'rgba(61, 90, 128, 0.4)',
+                    borderColor: '#3D5A80',
+                    pointBackgroundColor: '#3D5A80',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3D5A80'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     legend: { display: false },
+                     tooltip: {
+                        enabled: true,
+                        titleFont: { family: 'Inter' },
+                        bodyFont: { family: 'Inter' },
+                        backgroundColor: '#0D1B2A',
+                         callbacks: {
+                           title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#d1d5db' },
+                        grid: { color: '#d1d5db' },
+                        pointLabels: {
+                            font: { size: 13, family: 'Inter', weight: '600' },
+                            color: '#0D1B2A'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            color: '#293241',
+                            font: { family: 'Inter' }
+                        },
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        const implementationHurdlesCtx = document.getElementById('implementationHurdlesChart').getContext('2d');
+        new Chart(implementationHurdlesCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    wrapLabel('Data Quality & Availability', 16),
+                    wrapLabel('Model Accuracy & Validation', 16),
+                    wrapLabel('Industrial Scale-Up Complexity', 16),
+                    wrapLabel('Real-time Computational Burden', 16),
+                    wrapLabel('Human Factors & Operator Acceptance', 16)
+                ],
+                datasets: [{
+                    label: 'Challenge Severity',
+                    data: [95, 92, 85, 75, 70],
+                    backgroundColor: ['#EE6C4D', '#E0FBFC', '#98C1D9', '#3D5A80', '#293241'],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                ...commonChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        ticks: { 
+                            color: '#293241',
+                            font: { family: 'Inter' } 
+                        },
+                        grid: { color: '#e0e0e0' }
+                    },
+                    y: {
+                        ticks: { 
+                            color: '#293241',
+                            font: { family: 'Inter', size: 12 }
+                        },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        enabled: true,
+                        titleFont: { family: 'Inter', size: 14, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 },
+                        backgroundColor: '#0D1B2A',
+                        callbacks: {
+                           title: tooltipTitleCallback,
+                           label: function(context) {
+                                return `Severity: ${context.parsed.x}`;
+                           }
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
