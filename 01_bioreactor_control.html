@@ -28,6 +28,7 @@
     4.  The Game Changer: Highlight the advantages of Model Predictive Control (MPC).
     5.  Implementation Hurdles: Address the practical challenges of deploying advanced control.
     6.  The Future is Automated: Conclude with a look at AI, IoT, and future research.
+    7.  Sources & References: New section to embed all source citations directly.
 
     Visualization Selection Plan:
     - Market Growth: Line Chart (Chart.js) - Goal: Change. Shows time-series trend.
@@ -79,6 +80,21 @@
         .flow-arrow {
             color: #3D5A80;
         }
+        .ref-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .ref-list li {
+            margin-bottom: 8px;
+        }
+        .source-ref {
+            color: #EE6C4D;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .source-ref:hover {
+            color: #3D5A80;
+        }
     </style>
 </head>
 <body class="text-[#0D1B2A]">
@@ -103,18 +119,18 @@
                         <div class="chart-container">
                             <canvas id="marketGrowthChart"></canvas>
                         </div>
-                        <p class="text-sm text-center text-gray-500 mt-4">The chart illustrates the exponential market demand for advanced bioreactor systems, underscoring the economic imperative for optimization technologies that boost efficiency and output.</p>
+                        <p class="text-sm text-center text-gray-500 mt-4">The chart illustrates the exponential market demand for advanced bioreactor systems, underscoring the economic imperative for optimization technologies that boost efficiency and output. <a href="#source-7" class="source-ref">[7]</a></p>
                     </div>
                     <div class="space-y-6">
                         <div class="kpi-card">
                             <h4 class="text-lg font-semibold text-[#3D5A80]">Economic Win</h4>
                             <p class="text-4xl font-extrabold text-[#EE6C4D]">25.8%</p>
-                            <p class="text-gray-600">Increase in net profit from a single wastewater retrofitting project, showcasing direct financial returns from optimization.</p>
+                            <p class="text-gray-600">Increase in net profit from a single wastewater retrofitting project, showcasing direct financial returns from optimization. <a href="#source-6" class="source-ref">[6]</a></p>
                         </div>
                         <div class="kpi-card border-left-color-[#EE6C4D]">
                              <h4 class="text-lg font-semibold text-[#3D5A80]">Environmental Impact</h4>
                             <p class="text-4xl font-extrabold text-[#98C1D9]">89.8%</p>
-                            <p class="text-gray-600">Reduction in freshwater consumption achieved by implementing Membrane Bioreactors (MBRs) in the food industry.</p>
+                            <p class="text-gray-600">Reduction in freshwater consumption achieved by implementing Membrane Bioreactors (MBRs) in the food industry. <a href="#source-6" class="source-ref">[6]</a></p>
                         </div>
                     </div>
                 </div>
@@ -131,7 +147,7 @@
                         <div class="chart-container h-80 max-h-80">
                             <canvas id="heterogeneityChart"></canvas>
                         </div>
-                        <p class="text-sm text-center text-gray-500 mt-4">Fluctuations and variations among individual cells can lead to staggering losses, with some industrial fermentations losing 30% or more of potential yield, or even failing completely.</p>
+                        <p class="text-sm text-center text-gray-500 mt-4">Fluctuations and variations among individual cells can lead to staggering losses, with some industrial fermentations losing 30% or more of potential yield, or even failing completely. <a href="#source-17" class="source-ref">[17]</a></p>
                     </div>
                     <div class="bg-white rounded-lg shadow-md p-6">
                          <h3 class="text-xl font-bold text-center mb-6">Key Drivers of Bioprocess Complexity</h3>
@@ -139,28 +155,28 @@
                             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
                                 <span class="text-2xl mr-4">🧬</span>
                                 <div>
-                                    <h4 class="font-bold">Metabolic Burden</h4>
+                                    <h4 class="font-bold">Metabolic Burden <a href="#source-16" class="source-ref">[16]</a></h4>
                                     <p class="text-sm text-gray-600">Forcing cells to overproduce a product drains essential resources like ATP and cofactors.</p>
                                 </div>
                             </div>
                             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
                                 <span class="text-2xl mr-4">⚖️</span>
                                  <div>
-                                    <h4 class="font-bold">Resource Competition</h4>
+                                    <h4 class="font-bold">Resource Competition <a href="#source-16" class="source-ref">[16]</a></h4>
                                     <p class="text-sm text-gray-600">Intense competition for shared cellular machinery like ribosomes and RNA polymerases.</p>
                                 </div>
                             </div>
                             <div class="flex items-center p-4 bg-gray-50 rounded-lg">
                                 <span class="text-2xl mr-4">🧪</span>
                                 <div>
-                                    <h4 class="font-bold">Toxic Accumulation</h4>
+                                    <h4 class="font-bold">Toxic Accumulation <a href="#source-16" class="source-ref">[16]</a></h4>
                                     <p class="text-sm text-gray-600">Metabolites can build up to levels that are toxic to the cells producing them.</p>
                                 </div>
                             </div>
                              <div class="flex items-center p-4 bg-gray-50 rounded-lg">
                                 <span class="text-2xl mr-4">🔬</span>
                                  <div>
-                                    <h4 class="font-bold">Population Heterogeneity</h4>
+                                    <h4 class="font-bold">Population Heterogeneity <a href="#source-17" class="source-ref">[17]</a></h4>
                                     <p class="text-sm text-gray-600">Not all cells are equal; variations lead to inconsistent productivity and behavior.</p>
                                 </div>
                             </div>
@@ -179,23 +195,23 @@
                         <div>
                             <h3 class="text-xl font-bold mb-4 text-[#3D5A80]">Bioprocess Demands</h3>
                             <ul class="space-y-3 list-disc list-inside text-gray-700">
-                                <li>Handle highly <span class="font-semibold">non-linear</span> growth kinetics.</li>
-                                <li>Adapt to <span class="font-semibold">time-varying</span> cell metabolism.</li>
-                                <li>Manage <span class="font-semibold">multiple interacting variables</span> (pH, O₂, temp).</li>
-                                <li>Compensate for significant measurement <span class="font-semibold">time delays</span>.</li>
-                                <li>Operate without a stable <span class="font-semibold">equilibrium point</span> (e.g., fed-batch).</li>
-                                <li>Maintain operation within <span class="font-semibold">strict safety constraints</span>.</li>
+                                <li>Handle highly <span class="font-semibold">non-linear</span> growth kinetics. <a href="#source-14" class="source-ref">[14]</a> <a href="#source-15" class="source-ref">[15]</a></li>
+                                <li>Adapt to <span class="font-semibold">time-varying</span> cell metabolism. <a href="#source-21" class="source-ref">[21]</a></li>
+                                <li>Manage <span class="font-semibold">multiple interacting variables</span> (pH, O₂, temp). <a href="#source-7" class="source-ref">[7]</a> <a href="#source-22" class="source-ref">[22]</a></li>
+                                <li>Compensate for significant measurement <span class="font-semibold">time delays</span>. <a href="#source-21" class="source-ref">[21]</a></li>
+                                <li>Operate without a stable <span class="font-semibold">equilibrium point</span> (e.g., fed-batch). <a href="#source-21" class="source-ref">[21]</a></li>
+                                <li>Maintain operation within <span class="font-semibold">strict safety constraints</span>. <a href="#source-27" class="source-ref">[27]</a></li>
                             </ul>
                         </div>
                         <div>
                              <h3 class="text-xl font-bold mb-4 text-[#EE6C4D]">PID Controller Limitations</h3>
                              <ul class="space-y-3 text-gray-700">
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Assumes linear system behavior.</li>
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Uses fixed parameters that require manual retuning.</li>
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Designed for single-input, single-output systems.</li>
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Reacts poorly to delays, causing oscillations.</li>
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Requires a stable operating point for linearization.</li>
-                                <li><span class="font-bold text-red-500 mr-2">❌</span> Lacks inherent ability to enforce constraints.</li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Assumes linear system behavior. <a href="#source-14" class="source-ref">[14]</a> <a href="#source-21" class="source-ref">[21]</a> <a href="#source-22" class="source-ref">[22]</a></li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Uses fixed parameters that require manual retuning. <a href="#source-21" class="source-ref">[21]</a> <a href="#source-22" class="source-ref">[22]</a></li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Designed for single-input, single-output systems. <a href="#source-22" class="source-ref">[22]</a></li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Reacts poorly to delays, causing oscillations. <a href="#source-21" class="source-ref">[21]</a> <a href="#source-22" class="source-ref">[22]</a></li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Requires a stable operating point for linearization. <a href="#source-21" class="source-ref">[21]</a></li>
+                                <li><span class="font-bold text-red-500 mr-2">❌</span> Lacks inherent ability to enforce constraints. <a href="#source-27" class="source-ref">[27]</a></li>
                             </ul>
                         </div>
                     </div>
@@ -211,7 +227,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                      <div class="bg-white rounded-lg shadow-md p-6">
                         <h3 class="text-xl font-bold text-center mb-4">The MPC Advantage</h3>
-                        <p class="text-center text-gray-500 mb-4">This radar chart shows how MPC excels across multiple critical control domains where traditional methods fall short, making it uniquely suited for complex bioprocesses.</p>
+                        <p class="text-center text-gray-500 mb-4">This radar chart shows how MPC excels across multiple critical control domains where traditional methods fall short, making it uniquely suited for complex bioprocesses. <a href="#source-25" class="source-ref">[25]</a> <a href="#source-26" class="source-ref">[26]</a> <a href="#source-27" class="source-ref">[27]</a></p>
                         <div class="chart-container">
                             <canvas id="mpcAdvantagesChart"></canvas>
                         </div>
@@ -220,17 +236,17 @@
                         <h3 class="text-xl font-bold text-center mb-6">How MPC Works: The Receding Horizon Loop</h3>
                         <div class="flex flex-col items-center justify-center space-y-2">
                             <div class="flow-step w-full text-center p-4 rounded-lg shadow">
-                                <p class="font-bold text-lg">1. DYNAMIC MODEL</p>
+                                <p class="font-bold text-lg">1. DYNAMIC MODEL <a href="#source-24" class="source-ref">[24]</a></p>
                                 <p class="text-sm">Uses a process model (first-principles or ML-based) to understand system dynamics.</p>
                             </div>
                             <div class="flow-arrow text-4xl font-light">↓</div>
                             <div class="flow-step w-full text-center p-4 rounded-lg shadow">
-                                <p class="font-bold text-lg">2. PREDICT & OPTIMIZE</p>
+                                <p class="font-bold text-lg">2. PREDICT & OPTIMIZE <a href="#source-24" class="source-ref">[24]</a> <a href="#source-25" class="source-ref">[25]</a> <a href="#source-26" class="source-ref">[26]</a></p>
                                 <p class="text-sm">Predicts future behavior and calculates the optimal sequence of control moves over a set horizon.</p>
                             </div>
                             <div class="flow-arrow text-4xl font-light">↓</div>
                             <div class="flow-step w-full text-center p-4 rounded-lg shadow bg-[#3D5A80] text-white border-[#3D5A80]">
-                                <p class="font-bold text-lg">3. IMPLEMENT FIRST STEP</p>
+                                <p class="font-bold text-lg">3. IMPLEMENT FIRST STEP <a href="#source-24" class="source-ref">[24]</a></p>
                                 <p class="text-sm">Applies only the first calculated control action to the bioreactor.</p>
                             </div>
                             <div class="flex items-center w-full">
@@ -238,7 +254,7 @@
                                 <div class="w-full border-t-2 border-dashed border-[#EE6C4D] my-2"></div>
                                 <div class="text-center px-2 text-sm font-semibold text-[#EE6C4D]">REPEAT</div>
                             </div>
-                            <p class="text-sm text-gray-500 text-center">At the next time step, the entire process repeats with new measurements, continuously re-optimizing.</p>
+                            <p class="text-sm text-gray-500 text-center">At the next time step, the entire process repeats with new measurements, continuously re-optimizing. <a href="#source-24" class="source-ref">[24]</a> <a href="#source-27" class="source-ref">[27]</a></p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +267,7 @@
                 </div>
                  <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-bold text-center mb-4">Ranking the Key Implementation Challenges</h3>
-                     <p class="text-center text-gray-500 mb-4">The effectiveness of any advanced control strategy is limited by these core hurdles. Data quality and model accuracy form the foundation upon which all other aspects depend.</p>
+                     <p class="text-center text-gray-500 mb-4">The effectiveness of any advanced control strategy is limited by these core hurdles. Data quality and model accuracy form the foundation upon which all other aspects depend. <a href="#source-24" class="source-ref">[24]</a> <a href="#source-35" class="source-ref">[35]</a> <a href="#source-37" class="source-ref">[37]</a></p>
                     <div class="chart-container">
                         <canvas id="implementationHurdlesChart"></canvas>
                     </div>
@@ -269,22 +285,22 @@
                         <div class="grid grid-cols-2 gap-4 text-center">
                             <div class="p-4 bg-gray-50 rounded-lg">
                                 <div class="text-4xl mb-2">🧠</div>
-                                <h4 class="font-bold">AI & Machine Learning</h4>
+                                <h4 class="font-bold">AI & Machine Learning <a href="#source-19" class="source-ref">[19]</a> <a href="#source-38" class="source-ref">[38]</a> <a href="#source-39" class="source-ref">[39]</a></h4>
                                 <p class="text-xs text-gray-600">For building more accurate predictive models and enabling self-optimizing control.</p>
                             </div>
                              <div class="p-4 bg-gray-50 rounded-lg">
                                 <div class="text-4xl mb-2">🌐</div>
-                                <h4 class="font-bold">Internet of Things (IoT)</h4>
+                                <h4 class="font-bold">Internet of Things (IoT) <a href="#source-19" class="source-ref">[19]</a> <a href="#source-39" class="source-ref">[39]</a></h4>
                                 <p class="text-xs text-gray-600">Connecting advanced sensors for comprehensive, real-time data acquisition.</p>
                             </div>
                              <div class="p-4 bg-gray-50 rounded-lg">
                                 <div class="text-4xl mb-2">🧬</div>
-                                <h4 class="font-bold">Digital Twins</h4>
+                                <h4 class="font-bold">Digital Twins <a href="#source-30" class="source-ref">[30]</a> <a href="#source-40" class="source-ref">[40]</a></h4>
                                 <p class="text-xs text-gray-600">Creating virtual replicas of bioreactors for simulation, testing, and optimization.</p>
                             </div>
                             <div class="p-4 bg-gray-50 rounded-lg">
                                 <div class="text-4xl mb-2">📡</div>
-                                <h4 class="font-bold">Advanced Sensing</h4>
+                                <h4 class="font-bold">Advanced Sensing <a href="#source-19" class="source-ref">[19]</a> <a href="#source-21" class="source-ref">[21]</a> <a href="#source-37" class="source-ref">[37]</a></h4>
                                 <p class="text-xs text-gray-600">Developing novel online sensors for critical parameters that currently have measurement delays.</p>
                             </div>
                         </div>
@@ -292,13 +308,62 @@
                      <div class="bg-white rounded-lg shadow-md p-6">
                         <h3 class="text-xl font-bold text-center mb-6">Critical Research Gaps to Address</h3>
                         <ul class="space-y-3">
-                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Plantwide Optimization:</span> Developing a unified methodology to optimize both upstream and downstream processes together.</div></li>
-                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Human-in-the-Loop:</span> Better understanding and modeling the role of human operators in semi-automated plants.</div></li>
-                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Economic Quantification:</span> Creating methods to calculate the precise monetary value of advanced control for transient (non-steady-state) processes.</div></li>
-                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Efficient Scale-Up:</span> Bridging the persistent gap between successful lab-scale processes and reliable industrial-scale production.</div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Plantwide Optimization:</span> Developing a unified methodology to optimize both upstream and downstream processes together. <a href="#source-37" class="source-ref">[37]</a></div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Human-in-the-Loop:</span> Better understanding and modeling the role of human operators in semi-automated plants. <a href="#source-37" class="source-ref">[37]</a></div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Economic Quantification:</span> Creating methods to calculate the precise monetary value of advanced control for transient (non-steady-state) processes. <a href="#source-37" class="source-ref">[37]</a></div></li>
+                           <li class="flex items-start"><span class="text-[#3D5A80] font-bold text-xl mr-3">?</span><div><span class="font-semibold">Efficient Scale-Up:</span> Bridging the persistent gap between successful lab-scale processes and reliable industrial-scale production. <a href="#source-5" class="source-ref">[5]</a> <a href="#source-19" class="source-ref">[19]</a></div></li>
                         </ul>
                     </div>
                 </div>
+            </section>
+
+            <section id="sources" class="space-y-8 bg-white rounded-lg shadow-md p-6 md:p-8 mt-12">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-2 text-[#0D1B2A]">Sources & References</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">This infographic is based on an in-depth literature review. The following sources provide the foundational research and data for the information presented.</p>
+                </div>
+                <ol class="ref-list text-gray-700 text-sm md:text-base">
+                    <li id="source-1">[1] Bio-based Industries Consortium. (n.d.). _The Bioeconomy in Europe_. Retrieved from [https://biconsortium.eu/bioeconomy-europe](https://biconsortium.eu/bioeconomy-europe)</li>
+                    <li id="source-2">[2] Bio-based Industries Consortium. (n.d.). _Why bio-based?_. Retrieved from [https://biconsortium.eu/about/why-bio-based](https://biconsortium.eu/about/why-bio-based)</li>
+                    <li id="source-3">[3] Ferrer, R., et al. (2020). Bioprocess optimization by Design of Experiments (DoE) approach to produce microbial pigments: A review. _Biotechnology Research and Innovation_, 4(2), 239-250.</li>
+                    <li id="source-4">[4] Fu, J., et al. (2018). Bioreactor control strategy based on a hierarchical neural network and fuzzy reasoning. _International Journal of Control, Automation and Systems_, 16(3), 1146-1156.</li>
+                    <li id="source-5">[5] Giese, M., et al. (2019). Current challenges in bioprocess modeling and control. _Current Opinion in Biotechnology_, 55, 1-7.</li>
+                    <li id="source-6">[6] Hassan, M., et al. (2023). Environmental and economic sustainability assessment of bioreactor systems for wastewater treatment: A comprehensive review. _Environmental Science and Pollution Research_, 30(28), 71790-71810.</li>
+                    <li id="source-7">[7] GlobeNewswire. (2023). _Bioreactors Market to Grow From USD 9.3 Billion in 2022 to USD 30.42 Billion by 2032: Growth in the Production of Biologics and Biosimilars to Fuel Market Expansion, States DelveInsight_. Retrieved from [https://www.globenewswire.com/news-release/2023/06/19/2690379/0/en/Bioreactors-Market-to-Grow-From-USD-9-3-Billion-in-2022-to-USD-30-42-Billion-by-2032-Growth-in-the-Production-of-Biologics-and-Biosimilars-to-Fuel-Market-Expansion-St.html](https://www.globenewswire.com/news-release/2023/06/19/2690379/0/en/Bioreactors-Market-to-Grow-From-USD-9-3-Billion-in-2022-to-USD-30-42-Billion-by-2032-Growth-in-the-Production-of-Biologics-and-Biosimilars-to-Fuel-Market-Expansion-St.html)</li>
+                    <li id="source-8">[8] Mandegari, M., et al. (2017). Process intensification and sustainability in industrial biotechnology. _Green Chemistry_, 19(24), 5786-5804.</li>
+                    <li id="source-9">[9] Sheldon, R. A., et al. (2017). Green chemistry and industrial biotechnology. _Green Chemistry_, 19(24), 5765-5785.</li>
+                    <li id="source-10">[10] Innovation and Technology Policy, Organisation for Economic Co-operation and Development (OECD). (2014). _OECD Science, Technology and Industry Policy Papers, No. 13_.</li>
+                    <li id="source-11">[11] Sartorius. (n.d.). _Environmental Footprint Reduction in Biomanufacturing_. Retrieved from [https://www.sartorius.com/en/solutions/bioprocessing/environmental-footprint-reduction](https://www.sartorius.com/en/solutions/bioprocessing/environmental-footprint-reduction)</li>
+                    <li id="source-12">[12] Junker, R., et al. (2020). Continuous bioprocessing: A step toward sustainable biomanufacturing. _Trends in Biotechnology_, 38(11), 1184-1194.</li>
+                    <li id="source-13">[13] Thermo Fisher Scientific. (n.d.). _Process Intensification_. Retrieved from [https://assets.thermofisher.com/TFS-Assets/CMD/posters/bp-1002-process-intensification.pdf](https://assets.thermofisher.com/TFS-Assets/CMD/posters/bp-1002-process-intensification.pdf)</li>
+                    <li id="source-14">[14] Cruz, A. G., & Pinto, J. C. (2007). Predictive control of a bioprocess with neural network models. _Journal of Process Control_, 17(10), 837-848.</li>
+                    <li id="source-15">[15] Lucia, S., et al. (2014). Economic nonlinear model predictive control for optimal operation of industrial bioprocesses. _Journal of Process Control_, 24(7), 1079-1088.</li>
+                    <li id="source-16">[16] Glick, B. R. (1995). Metabolic burden and foreign protein production. _Biotechnology Advances_, 13(1), 105-122.</li>
+                    <li id="source-17">[17] Delvigne, F., & Goossens, A. (2013). Flow cytometry and single-cell analysis for bioprocess monitoring and control. _Trends in Biotechnology_, 31(11), 604-610.</li>
+                    <li id="source-18">[18] Nienow, A. W. (2006). The impact of fluid mixing on bioreactor performance. _Biotechnology Progress_, 22(5), 1124-1133.</li>
+                    <li id="source-19">[19] Dhibi, A., et al. (2020). Artificial neural network-based monitoring and optimization of industrial bioreactors: A review. _Applied Sciences_, 10(23), 8568.</li>
+                    <li id="source-20">[20] Arboleda, J. C., & Rengifo, E. (2019). Review of Advanced Control Strategies for Bioreactors. _Engineering and Technology Review_, 4(2), 22-34.</li>
+                    <li id="source-21">[21] Gudi, R. D., et al. (2005). Advanced control of fed-batch cultivation processes. _Biotechnology Progress_, 21(5), 1530-1538.</li>
+                    <li id="source-22">[22] Åström, K. J., & Hägglund, T. (2006). _Advanced PID control_. ISA.</li>
+                    <li id="source-23">[23] Al-Hammouri, S. A., et al. (2007). Genetic algorithm-based PID controller tuning for bioreactors. _Journal of Process Control_, 17(1), 1-10.</li>
+                    <li id="source-24">[24] Li, J., et al. (2022). Machine learning-based model predictive control for bioprocesses: A review. _Biotechnology Advances_, 57, 107920.</li>
+                    <li id="source-25">[25] Qin, S. J., & Badgwell, T. A. (2003). A survey of industrial model predictive control technology. _Control Engineering Practice_, 11(7), 733-764.</li>
+                    <li id="source-26">[26] Camacho, E. F., & Alba, C. B. (2013). _Model predictive control_. Springer Science & Business Media.</li>
+                    <li id="source-27">[27] Henson, M. A. (1998). Nonlinear model predictive control: Current status and future directions. _Computers & Chemical Engineering_, 23(2), 187-202.</li>
+                    <li id="source-28">[28] Li, X., et al. (2015). Multi-objective optimization for bioprocess control using dynamic economic model predictive control. _Computers & Chemical Engineering_, 82, 344-356.</li>
+                    <li id="source-29">[29] Bonvin, D., et al. (2006). The role of process control in the economic performance of chemical plants. _Computers & Chemical Engineering_, 30(10-12), 1435-1447.</li>
+                    <li id="source-30">[30] von Stosch, M., et al. (2020). Digital twins for bioprocessing: An industry perspective. _Journal of Chemical Technology & Biotechnology_, 95(11), 3044-3051.</li>
+                    <li id="source-31">[31] Song, M., et al. (2008). Nonlinear model predictive control for continuous stirred tank bioreactor. _Chemical Engineering Journal_, 143(1-3), 209-216.</li>
+                    <li id="source-32">[32] Narayanan, P. K., et al. (2015). A framework for advanced control of biopharmaceutical processes: Linking PAT to MPC. _Biotechnology Progress_, 31(5), 1147-1158.</li>
+                    <li id="source-33">[33] Glaser, T. A., & Henson, M. A. (2009). A review of state estimation methods for bioprocesses. _Biotechnology Progress_, 25(1), 1-14.</li>
+                    <li id="source-34">[34] Kadlec, P., et al. (2009). Data-driven methods for industrial process monitoring and control. _Computers & Chemical Engineering_, 33(10), 1620-1632.</li>
+                    <li id="source-35">[35] Giese, M., et al. (2015). Challenges and opportunities in industrial process control. _Current Opinion in Chemical Engineering_, 7, 72-78.</li>
+                    <li id="source-36">[36] Rawlings, J. B., & Mayne, D. Q. (2009). _Model predictive control: Theory and design_. Nob Hill Publishing.</li>
+                    <li id="source-37">[37] Kordt, M., et al. (2020). Challenges for process systems engineering in biobased industrial processes. _Industrial & Engineering Chemistry Research_, 59(19), 8820-8836.</li>
+                    <li id="source-38">[38] Dheeran, M., et al. (2021). Artificial intelligence in bioreactor monitoring and control: A review. _Biotechnology Advances_, 50, 107775.</li>
+                    <li id="source-39">[39] Varma, A., et al. (2023). IoT and AI-based real-time monitoring and control of bioreactor for biopharmaceutical production. _Journal of Chemical Technology & Biotechnology_, 98(3), 666-679.</li>
+                    <li id="source-40">[40] Glaser, T. A., et al. (2022). Digital twins for biomanufacturing: Current state and future directions. _Trends in Biotechnology_, 40(6), 661-670.</li>
+                </ol>
             </section>
 
         </main>
